@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../../../components/AppIcon';
+import AppIcon from "./AppIcon";  // ✅ only this import
 
 const ResultDisplay = ({ result }) => {
   if (!result) return null;
@@ -50,7 +50,7 @@ const ResultDisplay = ({ result }) => {
     >
       <div className="flex items-start space-x-4">
         <div className={`flex-shrink-0 ${config?.iconColor}`}>
-          <Icon name={config?.iconName} size={24} strokeWidth={2} />
+          <AppIcon name={config?.iconName} size={24} strokeWidth={2} />
         </div>
 
         <div className="flex-1 space-y-2">
@@ -68,11 +68,11 @@ const ResultDisplay = ({ result }) => {
             className={`text-xs ${config?.textColor} opacity-75 pt-2 border-t border-current/20`}
           >
             <div className="flex items-center space-x-2">
-              <Icon name="User" size={14} strokeWidth={2} />
+              <AppIcon name="User" size={14} strokeWidth={2} />
               <span>UPI ID: {result?.upiId}</span>
             </div>
             <div className="flex items-center space-x-2 mt-1">
-              <Icon name="Clock" size={14} strokeWidth={2} />
+              <AppIcon name="Clock" size={14} strokeWidth={2} />
               <span>Checked: {new Date().toLocaleString()}</span>
             </div>
           </div>
